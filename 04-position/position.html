@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Position Example</title>
+    <style>
+        /*
+            포지션에는 static(디폴트값), fixed(어디든 오버랩해서 계속 해당위치에 고정시킴),
+             relative(), 
+             absolute(relative에 상대적으로 포지션을 잡는것, relative가 없는경우 문서 본문 body에 맞춰 포지션을 잡음) 4가지가 있다.
+        */
+        body, html{
+            height: 100%;
+            margin : 0;
+            padding: 0;
+        }
+        body{
+            height: 400%;
+            background-color: aqua;
+        }
+        #boxOne{
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            position: static;
+            /*position: static은 element를 거기 놓으면 거기 있을 것이다 라는 뜻
+            다시말해 그자리에서 움직이지 않음
+            static은 디폴트값임*/
+        }
+        #boxTwo{
+            height: 300px;
+            width: 300px;
+            background-color: green;
+            position: fixed;
+            left: 500px;
+            bottom: 20px;
+            /*position: fixed는 element를 화면상에 고정시켜 스크롤을 해도 움직이지 않는것을 말함*/
+        }
+        /*
+            position: absoute가 설정되면 html상에서 해당 element와 관계가 있는 (relative-부모박스) element를 살펴보고 이에 상응해서
+            포지션이 결정된다.
+            abs-box에 relative를 써주지 않으면 설정한대로 적용되지만
+            relative를 적어주면 부모박스 abs-box의 포지션에 상대적으로 움직이게된다.
+            만약 부모박스가 없다면 차일드박스인 빨간색 박스는 문서 본문 body에 맞춰서 포지션을 잡는다.
+            반대로 부모박스가 relative라고 포지션을 설정하면 차일드박스는 그에 상대해서 absolute 포지션을 잡게된다.
+        */
+        .abs-box{
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            position: relative;
+        }
+        .abs-child{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position:absolute;
+            right: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxOne">
+        <div class="box-child"></div>
+    </div>
+    <div id="boxTwo">
+        <div class="box-child"></div>
+    </div>
+    <div class="abs-box">
+        <div class="abs-child"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Selectors and Pseudo Selectors</title>
+    <style>
+        /*
+            pseudo selector(가상 셀렉터)란 셀렉터인데 element가 아닌 것을 뜻함. 
+            tag name, id, class를 사용하지않는것을 말한다.
+
+            input에서 required는 필수항목을 말함.
+
+            여러 box중 id, class를 사용하지 않고 설정을 변경하기 위해서는?
+            .box:last-child(마지막) or .box:first-child(첫째) or .box:nth-child(2)(중간)
+            .box:nth-child(2n)(2의 배수)
+
+            input + .box 는 서로 형제라는 뜻
+            input > .box 는 direct child
+        */
+        input[type="submit"]{
+            background-color: red;
+        }
+        input[required="required"]{
+            background-color: aqua;
+        }
+        /* input + .box{
+            border : 1px solid yellow;
+        } */
+        .container>.box{
+            background-color: yellow;
+        }
+        .box{
+            background-color: greenyellow;
+            display: block;
+            height: 100px;
+            border: 1px solid black;
+            margin: 1px;
+        }
+        /* .box:nth-child(2n+1){
+            background-color: pink;
+        } */
+
+        .child{
+            background-color: purple;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+            <div class="box child"></div>
+        <div class="box"></div>
+        <div class="box">
+            <input type="password" required="required">
+            <input type="submit">
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

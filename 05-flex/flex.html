@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flex Example</title>
+    <style>
+        /*
+            inline-block의 문제점은 box를 여려개 만들었을때, 옆으로 안늘어나고 밑으로 떨어지는것이다.
+            그래서 마진을 넣을 때 좌우가 정확하게 일치하지 않고 자동으로 완성되는 그리드가 없었던것이다.
+
+            만약 box3개를 가운데로 이동하려면 마진을 조정해야하고, 다른 기기에서 본다면 다른모습으로 출력이 될것이다.
+            이 문제를 flex로 해결한다.
+
+            flex를 적용할때는 children box에 적용하지 않는다.
+            오직 부모 box에만 적용하면된다.
+            부모 클래스를 flex컨테이너로 만들어 children 박스들에게 어디로 이동할지 일일히 명령할 필요가 없다. 
+            부모 클래스에 한번 명령하면 된다.
+
+            justify-content는 수평적으로 적용
+            aling-items는 수직적으로 적용
+
+            flex-direction을 column으로 설정하면 justify-content는 수직으로 적용되고, align-items는 수평으로 적용됨, 
+            row는 디폴트 값으로 원래대로 적용됨.
+
+            flex를 사용하면 box가 많아지고 창을 줄여도 그 창에 맞춰 폭이 좁아진다.
+        
+            flex-wrap을 사용하면 wrap의 경우 box의 크기를 유지시켜 주고, nowrap의 경우 box의 크기를 무시한 채 폭에 맞춰 줄인다.
+        */
+        body, html{
+            height: 100%;
+        }
+        .father{
+            display: flex;
+            justify-content: space-between;/*space-between, space-around*/
+            align-items: flex-start; /*center, flex-end, flex-start*/
+            flex-direction: row;/*row-reverse, column-reverse 는 역방향*/            
+            height: 100%;
+            flex-wrap: wrap-reverse;/*wrap, nowrap, wrap-reverse*/
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+    </div>
+</body>
+</html>

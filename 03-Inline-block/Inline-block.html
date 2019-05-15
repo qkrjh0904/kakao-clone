@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Inline Example</title>
+        <style>
+            /* box는 block 이나 inline-block 둘 중 하나가 되어야한다.
+            inline은 box의 모든 property 설정 값을 지운다.
+            inline으로 display설정을 하면 더이상 박스가 아니라 text로 취급된다. */
+            .box{
+                background-color: aqua;
+                width: 200px;
+                height: 200px;
+                border: 5px dashed red;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <span class="box">1</span>
+        <span class="box">2</span>
+        <span class="box">3</span>
+    </body>
+</html>

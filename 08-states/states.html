@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS states</title>
+    <style>
+        .box{
+            background-color: red;
+            font-size: 40px;
+        }
+        /*
+            hover : 마우스가 위에 올라오면
+            active : 마우스가 클릭될 때
+
+        */
+        .box:hover{ 
+            background-color: pink;
+        }
+        .box:active{
+            background-color: green;
+        }
+        .box:focus{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <textarea class="box">lalalala</textarea>
+</body>
+</html>
