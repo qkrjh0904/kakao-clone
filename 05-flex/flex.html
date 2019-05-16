@@ -25,6 +25,26 @@
             flex를 사용하면 box가 많아지고 창을 줄여도 그 창에 맞춰 폭이 좁아진다.
         
             flex-wrap을 사용하면 wrap의 경우 box의 크기를 유지시켜 주고, nowrap의 경우 box의 크기를 무시한 채 폭에 맞춰 줄인다.
+
+            justify-contet
+            flex-start: 요소들을 컨테이너의 왼쪽으로 정렬합니다.
+            flex-end: 요소들을 컨테이너의 오른쪽으로 정렬합니다.
+            center: 요소들을 컨테이너의 가운데로 정렬합니다.
+            space-between: 요소들 사이에 동일한 간격을 둡니다.
+            space-around: 요소들 주위에 동일한 간격을 둡니다.
+
+            align-itmes
+            flex-start: 요소들을 컨테이너의 꼭대기로 정렬합니다.
+            flex-end: 요소들을 컨테이너의 바닥으로 정렬합니다.
+            center: 요소들을 컨테이너의 세로선 상의 가운데로 정렬합니다.
+            baseline: 요소들을 컨테이너의 시작 위치에 정렬합니다.
+            stretch: 요소들을 컨테이너에 맞도록 늘립니다.
+
+            flex-direction(column-reverse 또는 row-reverse를 사용하면 요소들의 start와 end의 순서도 뒤바뀝니다.)
+            row: 요소들을 텍스트의 방향과 동일하게 정렬합니다.
+            row-reverse: 요소들을 텍스트의 반대 방향으로 정렬합니다.
+            column: 요소들을 위에서 아래로 정렬합니다.
+            column-reverse: 요소들을 아래에서 위로 정렬합니다.
         */
         body, html{
             height: 100%;
@@ -35,7 +55,7 @@
             align-items: flex-start; /*center, flex-end, flex-start*/
             flex-direction: row;/*row-reverse, column-reverse 는 역방향*/            
             height: 100%;
-            flex-wrap: wrap-reverse;/*wrap, nowrap, wrap-reverse*/
+            flex-wrap: ;/*wrap, nowrap, wrap-reverse, no-wrap-reverse*/
         }
         .box{
             width: 200px;

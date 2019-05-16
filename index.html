@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <!--meta는 브라우저를 위한 정보이고, 유저를 위한 정보는 아니다. 그래서 head부분에 저장한다. 정보는 head 작성내용은 body로~!-->
         <meta charset="utf-8">
+        <meta name="author" content="Nomad Coders"> 
         <meta name="description" content="Welcome to my Kakao Clone">
         <title>Joel's Page</title>
+        <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-        <h1>This is my big title</h1>
-        <h6>This is my small title</h6>
+        <!-- div는 박스를 위한 컨테이너, span은 텍스트를 위한 컨테이너 -->
+        <section>
+            <header id="headerNumberOne" class="defaultHeader">
+                <h1>Title of a section</h1>
+            </header>
+        </section>
+        <div>
+            <header id="differentHeader" class="defaultHeader">Title of the unkown container</header>
+        </div>
     </body>
 </html>
